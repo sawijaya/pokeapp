@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Kingfisher (6.1.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - Realm (10.5.1):
+    - Realm/Headers (= 10.5.1)
+  - Realm/Headers (10.5.1)
+  - SwiftyJSON (5.0.0)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - Kingfisher (~> 6.1)
+  - NVActivityIndicatorView (~> 5.1)
+  - Realm (~> 10.5)
+  - SwiftyJSON (~> 5.0)
+  - Swinject (~> 2.7)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - NVActivityIndicatorView
+    - Realm
+    - SwiftyJSON
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  Realm: 77fcb4e0b9f2963ea06f584749a0d7dc9cab95e1
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 0e291a83f375bc4a195c745edf171af3f5b8fa21
+
+COCOAPODS: 1.10.0

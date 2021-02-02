@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeViewCellIdentifier" id="KGk-i7-Jjw" customClass="HomeViewCell" customModule="pokeapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S5z-kF-6hU">
+                        <rect key="frame" x="16" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="GRs-Ax-K8t"/>
+                            <constraint firstAttribute="height" constant="64" id="Gbu-gY-sTh"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IYg-PA-hY2">
+                        <rect key="frame" x="88" y="18.5" width="75" height="43"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulbasaur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-VJ-m0B">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHD-wb-OM1">
+                                <rect key="frame" x="0.0" y="23.5" width="36.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="qkU-HP-oo4">
+                        <rect key="frame" x="224" y="20" width="86" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poison" translatesAutoresizingMaskIntoConstraints="NO" id="y2s-n5-aHs">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="1NJ-Tu-ant">
+                                <rect key="frame" x="46" y="0.0" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-2H-t6g">
+                        <rect key="frame" x="16" y="79" width="304" height="1"/>
+                        <color key="backgroundColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="lQe-Ra-pqB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sHy-2H-t6g" secondAttribute="bottom" id="16g-hQ-zdh"/>
+                    <constraint firstAttribute="trailing" secondItem="sHy-2H-t6g" secondAttribute="trailing" id="3Qf-P8-fxQ"/>
+                    <constraint firstItem="S5z-kF-6hU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="47I-sW-0Jj"/>
+                    <constraint firstAttribute="trailing" secondItem="qkU-HP-oo4" secondAttribute="trailing" constant="10" id="94c-rR-7bY"/>
+                    <constraint firstItem="IYg-PA-hY2" firstAttribute="leading" secondItem="S5z-kF-6hU" secondAttribute="trailing" constant="8" id="FQd-ax-F2D"/>
+                    <constraint firstItem="qkU-HP-oo4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NtT-h3-xrx"/>
+                    <constraint firstItem="S5z-kF-6hU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VOL-rD-qn0"/>
+                    <constraint firstItem="sHy-2H-t6g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="XX9-Wf-wxv"/>
+                    <constraint firstItem="IYg-PA-hY2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fiw-G9-DRJ"/>
+                    <constraint firstAttribute="bottom" secondItem="S5z-kF-6hU" secondAttribute="bottom" constant="8" id="yjx-mm-aB9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgvw" destination="S5z-kF-6hU" id="qgb-YW-H7X"/>
+                <outlet property="lblName" destination="oJY-VJ-m0B" id="xaq-pr-Hi0"/>
+                <outlet property="lblNumber" destination="cHD-wb-OM1" id="Zv5-Pn-FeE"/>
+                <outletCollection property="imgvwTypes" destination="y2s-n5-aHs" collectionClass="NSMutableArray" id="k0V-o2-MbB"/>
+                <outletCollection property="imgvwTypes" destination="1NJ-Tu-ant" collectionClass="NSMutableArray" id="rYR-Rk-0HZ"/>
+            </connections>
+            <point key="canvasLocation" x="128.98550724637681" y="101.78571428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Poison" width="40" height="40"/>
+        <image name="Water" width="40" height="40"/>
+    </resources>
+</document>
