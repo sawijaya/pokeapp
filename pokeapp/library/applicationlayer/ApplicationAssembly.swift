@@ -15,6 +15,7 @@ final class ApplicationAssembly {
     class var assembler: Assembler {
         return Assembler([
             ServiceAssemblyContainer(),
+            RepositoryAssemblyContainer(),
             HomeAssemblyContainer()
         ])
     }

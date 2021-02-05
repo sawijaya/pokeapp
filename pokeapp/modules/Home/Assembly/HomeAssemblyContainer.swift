@@ -16,6 +16,10 @@ final class HomeAssemblyContainer: Assembly  {
         container.register(IHomeInteractorIn.self) { (r, presenter: HomePresenter) in
             let interactor: HomeInteractor = HomeInteractor()
             interactor.out = presenter
+            let service: PokemonService = r.resolve(IPokemonService.self) as! PokemonService
+            service.out = interactor
+            interactor.service = service
+//            interactor.service.
             return interactor
         }
         

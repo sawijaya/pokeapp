@@ -16,8 +16,14 @@ public class HomePresenter: IHomeModule {
 	
 	public init() {
 	}
+    
+    public func fetchPokemon(_ limit: Int, offset: Int) {
+        self.interactor?.fetchPokemon(limit, offset: offset)
+    }
 }
 
 extension HomePresenter: IHomeInteractorOut {
-	
+    public func loadPokemons(_ pokemons: [NSDictionary]) {
+        self.view?.loadPokemons(pokemons)
+    }
 }

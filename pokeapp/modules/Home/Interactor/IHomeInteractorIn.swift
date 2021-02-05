@@ -7,6 +7,6 @@
 
 import UIKit
 
-public protocol IHomeInteractorIn: class {
-	
+public protocol IHomeInteractorIn {
+    func fetchPokemon(_ limit: Int, offset: Int)
 }

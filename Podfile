@@ -10,6 +10,6 @@ target 'pokeapp' do
   pod 'NVActivityIndicatorView', '~> 5.1'
   pod 'SwiftyJSON', '~> 5.0'
   pod 'Kingfisher', '~> 6.1'
-  pod 'Realm', '~> 10.5'
+  pod 'RealmSwift', '~> 10.5'
 
 end

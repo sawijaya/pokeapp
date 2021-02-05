@@ -8,5 +8,5 @@
 import UIKit
 
 public protocol IHomeModule: class {
-	
+    func fetchPokemon(_ limit: Int, offset: Int)
 }
