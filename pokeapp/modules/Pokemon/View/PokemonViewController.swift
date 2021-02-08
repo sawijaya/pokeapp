@@ -16,12 +16,14 @@ public class PokemonViewController: UIViewController {
     @IBOutlet weak var btnEvolutions: UIButton!
     @IBOutlet var btns: [UIButton]!
     var pokemonStatsView: PokemonStatsView?
+    var pokemonEvolutionView: PokemonEvolutionView?
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupComponent()
         
-        self.setActiveButton(self.btnStats)
+        self.tapStatsView(self.btnStats)
     }
     
     func setupComponent(){
@@ -65,18 +67,37 @@ public class PokemonViewController: UIViewController {
         }
     }
     
-    func addEvolutionView(){
+    func showEvolutionView(){
+        if self.pokemonEvolutionView == nil {
+            self.pokemonEvolutionView = PokemonEvolutionView.instantiate()
+        }
         
+        if let vw: PokemonEvolutionView = self.pokemonEvolutionView {
+            self.heightContent.constant = vw.contentSize.height
+            vw.translatesAutoresizingMaskIntoConstraints = false
+            self.vwContent.addSubview(vw)
+            vw.leadingAnchor.constraint(equalTo: self.vwContent.leadingAnchor).isActive = true
+            vw.trailingAnchor.constraint(equalTo: self.vwContent.trailingAnchor).isActive = true
+            vw.topAnchor.constraint(equalTo: self.vwContent.topAnchor).isActive = true
+            vw.bottomAnchor.constraint(equalTo: self.vwContent.bottomAnchor).isActive = true
+        }
+    }
+    
+    func hideEvolutionView(){
+        if let vw: PokemonEvolutionView = self.pokemonEvolutionView {
+            vw.removeFromSuperview()
+        }
     }
     
     @IBAction func tapStatsView(_ sender: UIButton) {
+        self.hideEvolutionView()
         self.showStatsView()
         self.setActiveButton(sender)
     }
     
     @IBAction func tapEvolutionView(_ sender: UIButton) {
         self.hideStatsView()
-        self.heightContent.constant = 100
+        self.showEvolutionView()
         self.setActiveButton(sender)
     }
     

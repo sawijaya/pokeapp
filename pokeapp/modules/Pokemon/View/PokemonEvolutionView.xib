@@ -10,17 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PokemonEvolutionView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PokemonEvolutionView" customModule="pokeapp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-3p-pEs">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-3p-pEs">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="kSh-yf-fnJ"/>
-                        <outlet property="delegate" destination="-1" id="H8s-D7-XIT"/>
-                    </connections>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -31,6 +27,9 @@
                 <constraint firstItem="8EG-3p-pEs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QgD-xE-nZ4"/>
                 <constraint firstItem="8EG-3p-pEs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TXn-vl-FU2"/>
             </constraints>
+            <connections>
+                <outlet property="tableView" destination="8EG-3p-pEs" id="shB-mO-37y"/>
+            </connections>
             <point key="canvasLocation" x="139" y="58"/>
         </view>
     </objects>

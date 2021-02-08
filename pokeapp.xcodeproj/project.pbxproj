@@ -35,6 +35,8 @@
 		D8693B2425D03D530022C76A /* PokemonStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8693B2325D03D530022C76A /* PokemonStatsView.xib */; };
 		D8693B2725D1961A0022C76A /* PokemonEvolutionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8693B2625D1961A0022C76A /* PokemonEvolutionView.xib */; };
 		D8693B2A25D196230022C76A /* PokemonEvolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8693B2925D196230022C76A /* PokemonEvolutionView.swift */; };
+		D8693B2E25D1974F0022C76A /* PokemonEvolutionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8693B2C25D1974F0022C76A /* PokemonEvolutionViewCell.swift */; };
+		D8693B2F25D1974F0022C76A /* PokemonEvolutionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8693B2D25D1974F0022C76A /* PokemonEvolutionViewCell.xib */; };
 		D8D0182425C9A07000F7B900 /* ModuleRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0181025C9A07000F7B900 /* ModuleRoute.swift */; };
 		D8D0182525C9A07000F7B900 /* TransitionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0181125C9A07000F7B900 /* TransitionNode.swift */; };
 		D8D0182625C9A07000F7B900 /* ExtUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0181225C9A07000F7B900 /* ExtUIViewController.swift */; };
@@ -111,6 +113,8 @@
 		D8693B2325D03D530022C76A /* PokemonStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonStatsView.xib; sourceTree = "<group>"; };
 		D8693B2625D1961A0022C76A /* PokemonEvolutionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonEvolutionView.xib; sourceTree = "<group>"; };
 		D8693B2925D196230022C76A /* PokemonEvolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEvolutionView.swift; sourceTree = "<group>"; };
+		D8693B2C25D1974F0022C76A /* PokemonEvolutionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEvolutionViewCell.swift; sourceTree = "<group>"; };
+		D8693B2D25D1974F0022C76A /* PokemonEvolutionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonEvolutionViewCell.xib; sourceTree = "<group>"; };
 		D8D0181025C9A07000F7B900 /* ModuleRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleRoute.swift; sourceTree = "<group>"; };
 		D8D0181125C9A07000F7B900 /* TransitionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionNode.swift; sourceTree = "<group>"; };
 		D8D0181225C9A07000F7B900 /* ExtUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtUIViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 				D8693B2325D03D530022C76A /* PokemonStatsView.xib */,
 				D8693B2625D1961A0022C76A /* PokemonEvolutionView.xib */,
 				D8693B2925D196230022C76A /* PokemonEvolutionView.swift */,
+				D8693B2C25D1974F0022C76A /* PokemonEvolutionViewCell.swift */,
+				D8693B2D25D1974F0022C76A /* PokemonEvolutionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				D84B9CDE25C99AFF007ED4F5 /* LaunchScreen.storyboard in Resources */,
 				D84B9CDB25C99AFF007ED4F5 /* Assets.xcassets in Resources */,
 				D84B9CD925C99AFF007ED4F5 /* Main.storyboard in Resources */,
+				D8693B2F25D1974F0022C76A /* PokemonEvolutionViewCell.xib in Resources */,
 				D8D0185D25C9A58C00F7B900 /* HomeViewCell.xib in Resources */,
 				D8D0185025C9A14E00F7B900 /* HomeViewController.xib in Resources */,
 			);
@@ -579,6 +586,7 @@
 				D8D0189A25CAF9E900F7B900 /* CoreDateStack.swift in Sources */,
 				D8D0185425C9A14E00F7B900 /* IHomeInteractorOut.swift in Sources */,
 				D8693B0825CD89F40022C76A /* IPokemonRouterIn.swift in Sources */,
+				D8693B2E25D1974F0022C76A /* PokemonEvolutionViewCell.swift in Sources */,
 				D8D0185225C9A14E00F7B900 /* IHomeView.swift in Sources */,
 				D8693B1B25CD9FA30022C76A /* AbilityPokemon.swift in Sources */,
 				D8D0184F25C9A14E00F7B900 /* IHomeModule.swift in Sources */,
