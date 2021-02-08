@@ -23,6 +23,11 @@ protocol IEndpointType {
 enum EndpointItem {
     case pokemon(_ parameters:[String:Any])
     case pokemonById(_ id: Int)
+    case type
+    case ability
+    case abilityById(_ id: Int)
+    case pokemonSpeciesById(_ id: Int)
+    case evolutionChainById(_ id: Int)
 }
 
 extension EndpointItem: URLRequestConvertible {
@@ -44,7 +49,7 @@ extension EndpointItem: URLRequestConvertible {
 extension EndpointItem: IEndpointType {
     // MARK: - Vars & Lets
     var baseURL: String {
-        return "https://pokeapi.co/api/"
+        return "https://pokeapi.co/api"
     }
     
     var version: String {
@@ -57,6 +62,16 @@ extension EndpointItem: IEndpointType {
                 return "/pokemon"
             case .pokemonById(let id):
                 return "/pokemon/\(id)"
+            case .type:
+                return "/type"
+            case .ability:
+                return "/ability?limit=327"
+            case .abilityById(let id):
+                return "/ability/\(id)"
+            case .pokemonSpeciesById(let id):
+                return "/pokemon-species/\(id)"
+            case .evolutionChainById(let id):
+                return "/evolution-chain/\(id)"
         }
     }
     

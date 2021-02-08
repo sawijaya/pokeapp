@@ -8,5 +8,5 @@
 import UIKit
 
 public protocol IHomeRouterIn: class {
-	
+    func presentPokemon(_ pokemon:[String:Any])
 }

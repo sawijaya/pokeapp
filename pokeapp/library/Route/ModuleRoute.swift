@@ -54,11 +54,14 @@ public enum TransitionStyle {
 // MARK: -
 enum Module {
     case Home
+    case Pokemon
     
     internal var viewController: UIViewController {
         switch self {
             case .Home:
                 return AppContainer.shared.homeViewController
+            case .Pokemon:
+                return AppContainer.shared.pokemonViewController
             default:
                 return UIViewController()
             

@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Ability" representedClassName=".Ability" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="AbilityPokemon" representedClassName=".AbilityPokemon" syncable="YES">
+        <attribute name="abilityId" optional="YES" attributeType="String"/>
+        <attribute name="pokemonId" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Evolution" representedClassName=".Evolution" syncable="YES">
+        <attribute name="evolvesBaseId" optional="YES" attributeType="String"/>
+        <attribute name="evolvesFromId" optional="YES" attributeType="String"/>
+        <attribute name="evolvesToId" optional="YES" attributeType="String"/>
+        <attribute name="minLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Pokemon" representedClassName=".Pokemon" syncable="YES">
         <attribute name="attack" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="captureRate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="defence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="defense" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="generation" optional="YES" attributeType="String"/>
         <attribute name="habitat" optional="YES" attributeType="String"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="hp" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="spcAttack" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="spcDefence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spcDefense" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="speed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="types" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="TypePokemon" inverseName="ofPokemon" inverseEntity="TypePokemon"/>
+    </entity>
+    <entity name="PType" representedClassName=".PType" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TypePokemon" representedClassName=".TypePokemon" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pokemonId" optional="YES" attributeType="String"/>
+        <attribute name="typeId" optional="YES" attributeType="String"/>
+        <relationship name="ofPokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pokemon" inverseName="types" inverseEntity="Pokemon"/>
     </entity>
     <elements>
-        <element name="Pokemon" positionX="-63" positionY="-18" width="128" height="253"/>
+        <element name="Pokemon" positionX="-63" positionY="-18" width="128" height="283"/>
+        <element name="PType" positionX="151.625" positionY="177.90234375" width="128" height="73"/>
+        <element name="TypePokemon" positionX="312.22265625" positionY="-3.87890625" width="128" height="103"/>
+        <element name="Ability" positionX="153" positionY="126" width="128" height="88"/>
+        <element name="AbilityPokemon" positionX="162" positionY="135" width="128" height="73"/>
+        <element name="Evolution" positionX="171" positionY="144" width="128" height="103"/>
     </elements>
 </model>

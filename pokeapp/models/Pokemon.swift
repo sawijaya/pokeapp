@@ -12,15 +12,17 @@ public class Pokemon: NSManagedObject {
     @NSManaged var id: String
     @NSManaged var name: String
     @NSManaged var image: String
-    @NSManaged var captureRate: NSNumber
+    @NSManaged var captureRate: Int
     @NSManaged var generation: String
     @NSManaged var habitat: String
-    @NSManaged var hp: NSNumber
-    @NSManaged var attack: NSNumber
-    @NSManaged var defence: NSNumber
-    @NSManaged var spcAttack: NSNumber
-    @NSManaged var spcDefence: NSNumber
-    @NSManaged var speed: NSNumber
-    @NSManaged var weight: NSNumber
-    @NSManaged var height: NSNumber
+    @NSManaged var hp: Int
+    @NSManaged var attack: Int
+    @NSManaged var defense: Int
+    @NSManaged var spcAttack: Int
+    @NSManaged var spcDefence: Int
+    @NSManaged var speed: Int
+    @NSManaged var weight: Int
+    @NSManaged var height: Int
+    @NSManaged var isComplete: Bool
+    @NSManaged var types: NSSet?
 }

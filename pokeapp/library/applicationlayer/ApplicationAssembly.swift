@@ -16,7 +16,8 @@ final class ApplicationAssembly {
         return Assembler([
             ServiceAssemblyContainer(),
             RepositoryAssemblyContainer(),
-            HomeAssemblyContainer()
+            HomeAssemblyContainer(),
+            PokemonAssemblyContainer()
         ])
     }
     
@@ -46,6 +47,13 @@ class AppContainer {
             let vc: UIViewController = self.defaultContainer.resolve(HomeViewController.self) ?? UIViewController()
             let nv: UINavigationController = UINavigationController(rootViewController: vc)
             return nv
+        }
+    }
+    
+    var pokemonViewController: UIViewController {
+        get {
+            let vc: UIViewController = self.defaultContainer.resolve(PokemonViewController.self) ?? UIViewController()
+            return vc
         }
     }
 }

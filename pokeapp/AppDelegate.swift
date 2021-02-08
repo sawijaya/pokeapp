@@ -22,12 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc = AppContainer.shared.homeViewController
         window.rootViewController = vc
         
-        if let url: URL = URL(string: "https://pokeapi.co/api/v2/pokemon/1/") {
-            print(url.pathExtension)
-            print(url.pathComponents)
-            print(url.lastPathComponent)
-        }
-
         return true
     }
 

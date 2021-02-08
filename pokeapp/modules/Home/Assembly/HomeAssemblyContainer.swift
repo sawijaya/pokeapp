@@ -26,7 +26,7 @@ final class HomeAssemblyContainer: Assembly  {
         container.register(IHomeRouterIn.self) { (r, viewController: HomeViewController, presenter: HomePresenter) in
             let router: HomeRouter = HomeRouter()
             router.presenter = presenter
-            
+            router.transitionHandler = viewController
             router.interactor = r.resolve(IHomeInteractorIn.self, argument: presenter)
             router.view = viewController
             

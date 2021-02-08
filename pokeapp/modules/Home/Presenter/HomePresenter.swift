@@ -8,17 +8,33 @@
 import UIKit
 
 public class HomePresenter: IHomeModule {
-	
 	var interactor: IHomeInteractorIn?
 	var router: IHomeRouterIn?
 	weak var view: IHomeView?
 	public var parameters: [String: Any]?
 	
 	public init() {
+        
 	}
     
     public func fetchPokemon(_ limit: Int, offset: Int) {
         self.interactor?.fetchPokemon(limit, offset: offset)
+    }
+    
+    public func fetchPokemonById(_ id: Int) {
+        self.interactor?.fetchPokemonById(id)
+    }
+    
+    public func presentPokemon(_ id: Int) {
+        self.router?.presentPokemon([:])
+    }
+    
+    public func requestType() {
+        self.interactor?.requestType()
+    }
+    
+    public func requestAbility() {
+        self.interactor?.requestAbility()
     }
 }
 

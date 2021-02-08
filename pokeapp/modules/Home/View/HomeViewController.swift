@@ -14,6 +14,7 @@ public class HomeViewController: UIViewController {
     var limit: Int = 20
     var isRequest: Bool = false
     var pokemons:[NSDictionary] = []
+    
 	override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +27,17 @@ public class HomeViewController: UIViewController {
     
     @objc func viewWillRequest(){
         self.request(true)
+        
+        self.requestType()
+        self.requestAbility()
+    }
+    
+    func requestType() {
+        self.presenter.requestType()
+    }
+    
+    func requestAbility() {
+        self.presenter.requestAbility()
     }
     
     @objc func request(_ reload: Bool = true){
@@ -47,7 +59,6 @@ public class HomeViewController: UIViewController {
         }
         print(#function)
     }
-    
     
     private func setUpNavigation() {
         let navigationBar: UINavigationBar = self.navigationController!.navigationBar
@@ -104,5 +115,14 @@ extension HomeViewController: UITableViewDelegate {
             print("request again")
             self.request(false)
         }
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pokemon: NSDictionary = self.pokemons[indexPath.row]
+        if let id: String = pokemon.value(forKey: "id") as? String,
+           let idInt: Int = Int(id) {
+            self.presenter.fetchPokemonById(idInt)
+        }
+        self.presenter.presentPokemon(1)
     }
 }

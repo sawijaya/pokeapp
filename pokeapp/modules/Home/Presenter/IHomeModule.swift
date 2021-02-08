@@ -9,4 +9,12 @@ import UIKit
 
 public protocol IHomeModule: class {
     func fetchPokemon(_ limit: Int, offset: Int)
+    
+    func fetchPokemonById(_ id: Int)
+    
+    func requestType()
+    
+    func requestAbility()
+    
+    func presentPokemon(_ id: Int)
 }
