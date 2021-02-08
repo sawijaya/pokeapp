@@ -9,4 +9,5 @@ import UIKit
 
 public protocol IHomeView: class {
     func loadPokemons(_ pokemons: [NSDictionary])
+//    func loadPokemon(_ pokemon: NSDictionary)
 }

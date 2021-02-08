@@ -18,6 +18,7 @@ protocol IPokemonService {
 
 public protocol IPokemonServiceOut: class {
     func loadPokemons(_ pokemons:[NSDictionary])
+    func loadPokemon(_ pokemon:NSDictionary)
 }
 
 class PokemonService: IPokemonService {
@@ -95,8 +96,9 @@ extension PokemonService: IPokemonRepositoryOut {
                let idInt: Int = Int(id) {
                 self.network.requestPokemonById(idInt)
             }
+        } else {
+            self.out.loadPokemon(pokemon)
         }
-        print(pokemon)
     }
     
     func loadPokemons(_ pokemons: [NSDictionary], limit: Int, offset: Int) {

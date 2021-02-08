@@ -13,14 +13,14 @@ public class HomeRouter: IHomeRouterIn {
 	var presenter: IHomeModule?
 	weak var view: IHomeView?
     
-    public func presentPokemon(_ pokemon: [String : Any]) {
+    public func presentPokemon(_ pokemon: NSDictionary) {
         try? self.transitionHandler.forCurrentModule(module: Module.Pokemon, to: IPokemonModule.self)
             .transition(animate: true).apply(to: { (viewController) in
                 
             })
             .to(preferred: .navigation(style: .push))
             .then { (moduleInput) in
-                
+                moduleInput.pokemon = pokemon
             }
     }
 }

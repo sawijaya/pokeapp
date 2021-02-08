@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 public class TypePokemon: NSManagedObject {
-    @NSManaged var typeId: String
+    @NSManaged var id: String
     @NSManaged var pokemonId: String
+    @NSManaged var name: String
 }

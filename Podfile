@@ -11,5 +11,7 @@ target 'pokeapp' do
   pod 'SwiftyJSON', '~> 5.0'
   pod 'Kingfisher', '~> 6.1'
   pod 'RealmSwift', '~> 10.5'
+  pod 'KMNavigationBarTransition', '~> 1.1.8'
+
 
 end

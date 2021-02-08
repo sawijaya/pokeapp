@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - Kingfisher (6.1.0)
+  - KMNavigationBarTransition (1.1.8)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.4)
   - Kingfisher (~> 6.1)
+  - KMNavigationBarTransition
   - NVActivityIndicatorView (~> 5.1)
   - RealmSwift (~> 10.5)
   - SwiftyJSON (~> 5.0)
@@ -24,6 +26,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - KMNavigationBarTransition
     - NVActivityIndicatorView
     - Realm
     - RealmSwift
@@ -33,12 +36,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  KMNavigationBarTransition: 7ee1a05ff758bce9258845a803f7a8b00585bd58
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   Realm: 77fcb4e0b9f2963ea06f584749a0d7dc9cab95e1
   RealmSwift: 6abe6aa6cd8b70cc1a87afcb9232cabea74ff1ac
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 9d4723e8c2ad3c592107a7533a48b3d4fdd9da78
+PODFILE CHECKSUM: 7bd9619aca7d5986813095339d7a76c459c1e7c3
 
 COCOAPODS: 1.10.0

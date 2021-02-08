@@ -8,5 +8,5 @@
 import UIKit
 
 public protocol IPokemonModule: class {
-	
+    var pokemon: NSDictionary? { set get }
 }

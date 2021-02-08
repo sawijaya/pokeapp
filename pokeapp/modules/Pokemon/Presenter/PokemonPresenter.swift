@@ -8,7 +8,7 @@
 import UIKit
 
 public class PokemonPresenter: IPokemonModule {
-	
+    public var pokemon: NSDictionary?
 	var interactor: IPokemonInteractorIn?
 	var router: IPokemonRouterIn?
 	weak var view: IPokemonView?

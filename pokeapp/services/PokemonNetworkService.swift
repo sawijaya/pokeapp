@@ -205,10 +205,27 @@ class PokemonNetworkService: IPokemonNetworkService {
                     return
                 }
                 pokemon["captureRate"] = species["capture_rate"]
+                
                 let habitat:[String:Any] = species["habitat"] as? [String:Any] ?? [:]
                 pokemon["habitat"] = habitat["name"]
+                
                 let generation:[String:Any] = species["generation"] as? [String:Any] ?? [:]
                 pokemon["generation"] = generation["name"]
+                
+                let color:[String:Any] = species["color"] as? [String:Any] ?? [:]
+                pokemon["color"] = color["name"]
+                
+                let flavorTextEntries:[[String:Any]] = species["flavor_text_entries"] as? [[String:Any]] ?? []
+                let flavorFilter = flavorTextEntries.filter { (flavor) -> Bool in
+                    let  language:[String:Any] = flavor["language"] as? [String:Any] ?? [:]
+                    let name: String = language["name"] as? String ?? "en"
+                    
+                    return name == "en"
+                }
+                let random:[String:Any] = flavorFilter.randomElement() ?? [:]
+                let desc: String = random["flavor_text"] as? String ?? ""
+                pokemon["desc"] = desc
+                
                 pokemon["isComplete"] = true
                 
                 self.out.loadObject(pokemon)

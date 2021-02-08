@@ -925,6 +925,26 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="imgvwTypes" destination="ebA-dd-DBU" collectionClass="NSMutableArray" id="lds-KK-ynt"/>
+                <outletCollection property="imgvwTypes" destination="Tcq-xC-4vH" collectionClass="NSMutableArray" id="jP9-NZ-k9n"/>
+                <outletCollection property="imgvwTypes" destination="ycL-wi-0Hc" collectionClass="NSMutableArray" id="que-rM-qPN"/>
+                <outletCollection property="imgvwTypes" destination="1E2-bg-ZED" collectionClass="NSMutableArray" id="3sq-UH-2PO"/>
+                <outletCollection property="imgvwTypes" destination="Mbe-ae-UJw" collectionClass="NSMutableArray" id="zUe-5Q-vRm"/>
+                <outletCollection property="imgvwTypes" destination="Jnh-fL-Kr7" collectionClass="NSMutableArray" id="dMr-le-GaL"/>
+                <outletCollection property="imgvwTypes" destination="Kua-rw-47U" collectionClass="NSMutableArray" id="Bvx-Ug-bhp"/>
+                <outletCollection property="imgvwTypes" destination="8wM-8B-8o2" collectionClass="NSMutableArray" id="OgN-36-vuK"/>
+                <outletCollection property="imgvwTypes" destination="2sa-vd-FIO" collectionClass="NSMutableArray" id="LFy-uP-43P"/>
+                <outletCollection property="imgvwTypes" destination="KL2-Oh-iLB" collectionClass="NSMutableArray" id="gLv-YH-Fyf"/>
+                <outletCollection property="imgvwTypes" destination="Xx1-US-50U" collectionClass="NSMutableArray" id="hvj-63-3b9"/>
+                <outletCollection property="imgvwTypes" destination="Hov-Xl-aIs" collectionClass="NSMutableArray" id="Y9y-0Z-SuC"/>
+                <outletCollection property="imgvwTypes" destination="cJd-zJ-9X7" collectionClass="NSMutableArray" id="SYb-vp-JW6"/>
+                <outletCollection property="imgvwTypes" destination="4YV-gR-Kj0" collectionClass="NSMutableArray" id="jo5-6f-rA0"/>
+                <outletCollection property="imgvwTypes" destination="9A5-4e-h1Z" collectionClass="NSMutableArray" id="HAT-02-LoZ"/>
+                <outletCollection property="imgvwTypes" destination="3U7-ar-dpG" collectionClass="NSMutableArray" id="NRz-hF-VvC"/>
+                <outletCollection property="imgvwTypes" destination="MGZ-5K-WRi" collectionClass="NSMutableArray" id="dRv-ck-Kkn"/>
+                <outletCollection property="imgvwTypes" destination="UbL-X6-acF" collectionClass="NSMutableArray" id="dNT-mf-Tko"/>
+            </connections>
             <point key="canvasLocation" x="95.652173913043484" y="95.758928571428569"/>
         </view>
     </objects>

@@ -123,6 +123,6 @@ extension HomeViewController: UITableViewDelegate {
            let idInt: Int = Int(id) {
             self.presenter.fetchPokemonById(idInt)
         }
-        self.presenter.presentPokemon(1)
+//        self.presenter.presentPokemon(1)
     }
 }

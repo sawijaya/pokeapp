@@ -36,4 +36,8 @@ extension HomeInteractor: IPokemonServiceOut {
     public func loadPokemons(_ pokemons: [NSDictionary]) {
         self.out?.loadPokemons(pokemons)
     }
+    
+    public func loadPokemon(_ pokemon: NSDictionary) {
+        self.out?.loadPokemon(pokemon)
+    }
 }

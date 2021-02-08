@@ -42,4 +42,9 @@ extension HomePresenter: IHomeInteractorOut {
     public func loadPokemons(_ pokemons: [NSDictionary]) {
         self.view?.loadPokemons(pokemons)
     }
+    
+    public func loadPokemon(_ pokemon: NSDictionary) {
+        self.router?.presentPokemon(pokemon)
+//        self.view?.loadPokemon(pokemon)
+    }
 }

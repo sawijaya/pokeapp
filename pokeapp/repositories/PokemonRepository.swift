@@ -97,14 +97,32 @@ class PokemonRepository: IPokemonRepository {
         do {
             let result = try taskContext.fetch(pokemonRequest)
             if let first = result.first {
-//                print(first.types?.allObjects)
-//                print(result)
-                self.out.loadPokemon(first)
+                var dictionary: [String:Any] = first as? [String:Any] ?? [:]
+                if let typePokemon: [NSDictionary] = self.fetchTypePokemonById(id) {
+                    dictionary["types"] = typePokemon
+                }
+                self.out.loadPokemon(dictionary as NSDictionary)
             }
-            print(result)
         } catch {
             print(error)
         }
+    }
+    
+    private func fetchTypePokemonById(_ id: Int) -> [NSDictionary]? {
+        let persistentContainer: NSPersistentContainer = CoreDataStack.shared.persistentContainer
+        let request = NSFetchRequest<NSDictionary>(entityName: "TypePokemon")
+        request.resultType = .dictionaryResultType
+        request.predicate = NSPredicate(format: "pokemonId == %@", "\(id)")
+        let taskContext = persistentContainer.newBackgroundContext()
+        taskContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+        taskContext.undoManager = nil
+        do {
+            let result = try taskContext.fetch(request)
+            return result
+        } catch {
+            print(error)
+        }
+        return nil
     }
     
     func fetchType() {
@@ -196,7 +214,7 @@ class PokemonRepository: IPokemonRepository {
         do {
             let result = try taskContext.fetch(pokemonRequest)
             if let object = result.first as? NSManagedObject {
-                let type:[[String:Any]] = pokemon["type"] as? [[String:Any]] ?? []
+                let type:[[String:Any]] = pokemon["types"] as? [[String:Any]] ?? []
                 self.insertUpdateType(type, atPokemon: id)
                 
                 print(pokemon)
@@ -218,6 +236,12 @@ class PokemonRepository: IPokemonRepository {
                 let generation: String = pokemon["generation"] as? String ?? ""
                 object.setValue(generation, forKey: "generation")
                 
+                let color: String = pokemon["color"] as? String ?? ""
+                object.setValue(color, forKey: "color")
+                
+                let desc: String = pokemon["desc"] as? String ?? ""
+                object.setValue(desc, forKey: "desc")
+                
                 let height: Int = pokemon["height"] as? Int ?? 0
                 object.setValue(height, forKey: "height")
                 
@@ -238,6 +262,7 @@ class PokemonRepository: IPokemonRepository {
                 
                 do {
                     try taskContext.save()
+                    self.fetchPokemonById(id)
                 }
                 catch {
                     print(error)
@@ -264,9 +289,10 @@ class PokemonRepository: IPokemonRepository {
                 var typesInsert:[[String:Any]] = []
                 for item in type {
                     var typeDict:[String:Any] = item as? [String: Any] ?? [:]
-                    typeDict["pokemonId"] = pokemonId
+                    typeDict["pokemonId"] = "\(pokemonId)"
                     typesInsert.append(typeDict)
                 }
+                print(typesInsert)
 //                var types:[String:Any] =
                 let insertRequest = NSBatchInsertRequest(entity: TypePokemon.entity(), objects: typesInsert)
                 do {

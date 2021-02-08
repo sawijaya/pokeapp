@@ -15,14 +15,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-3p-pEs">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="788"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="30"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8EG-3p-pEs" secondAttribute="bottom" id="KbB-y5-mmP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8EG-3p-pEs" secondAttribute="bottom" constant="30" id="KbB-y5-mmP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8EG-3p-pEs" secondAttribute="trailing" id="QMM-b8-6Ux"/>
                 <constraint firstItem="8EG-3p-pEs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QgD-xE-nZ4"/>
                 <constraint firstItem="8EG-3p-pEs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TXn-vl-FU2"/>

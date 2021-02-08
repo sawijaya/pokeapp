@@ -9,4 +9,5 @@ import UIKit
 
 public protocol IHomeInteractorOut: class {
     func loadPokemons(_ pokemons:[NSDictionary])
+    func loadPokemon(_ pokemon:NSDictionary)
 }
